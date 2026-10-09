@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "probability-distributions"
+version = "0.1.0"
+description = "Probability distributions with their stories, formulas and facts, plus sampling and interactive PMF/PDF/CDF plots."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Joseph Rich" }]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.10",
+    "matplotlib>=3.6",
+]
+keywords = ["probability", "statistics", "distributions", "pmf", "pdf", "cdf", "plotting"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Framework :: Jupyter",
+]
+
+[project.optional-dependencies]
+interactive = ["ipywidgets>=8", "ipython"]
+dev = ["pytest", "ipywidgets>=8", "ipython"]
+
+[project.urls]
+"Distribution Explorer" = "https://distribution-explorer.github.io/index.html"
+"Distribution chart" = "https://www.johndcook.com/blog/distribution_chart/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

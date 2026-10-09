@@ -1,3 +1,9 @@
 pmfs_and_pdfs/
 trash/
 .DS_Store
+__pycache__/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
